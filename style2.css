@@ -1,0 +1,567 @@
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.error-banner {
+  display: none;
+  background-color: #ffcccc;
+  color: #ff0000;
+  padding: 10px;
+  text-align: center;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  font-size: 22px;
+  font-weight: 300;
+}
+
+b{
+  font-weight: 500;
+}
+h1 {
+  font-family: 'Rajdhani', sans-serif;
+  color: white;
+  font-size: 100px;
+  letter-spacing: 5px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+  position: relative;
+  z-index: 3;
+
+}
+
+h2{
+  font-family: 'Raleway', sans-serif;
+}
+
+.title{
+  display: flex;
+}
+.container-1 {
+  width: 100vw; 
+  height: 100vh; 
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 35rem;
+  background-image: linear-gradient(to bottom, rgba(255, 168, 76, 0.6) 0%, rgba(255, 123, 13, 0.6) 100%), url("https://images.unsplash.com/photo-1446824505046-e43605ffb17f");
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-position: center center;
+  
+  
+}
+
+.bird {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+  background-size: auto 100%;
+  width: 88px;
+  height: 125px;
+  will-change: background-position;
+  animation-name: fly-cycle;
+  animation-timing-function: steps(10);
+  animation-iteration-count: infinite;
+}
+.bird--one {
+  animation-duration: 1s;
+  animation-delay: -0.5s;
+}
+.bird--two {
+  animation-duration: 0.9s;
+  animation-delay: -0.75s;
+}
+.bird--three {
+  animation-duration: 1.25s;
+  animation-delay: -0.25s;
+}
+.bird--four {
+  animation-duration: 1.1s;
+  animation-delay: -0.5s;
+}
+
+.bird-container {
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  transform: scale(0) translateX(-10vw);
+  will-change: transform;
+  animation-name: fly-right-one;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.bird-container--one {
+  animation-duration: 15s;
+  animation-delay: 0;
+}
+.bird-container--two {
+  animation-duration: 16s;
+  animation-delay: 1s;
+}
+.bird-container--three {
+  animation-duration: 14.6s;
+  animation-delay: 9.5s;
+}
+.bird-container--four {
+  animation-duration: 16s;
+  animation-delay: 10.25s;
+}
+
+@keyframes fly-cycle {
+  100% {
+    background-position: -900px 0;
+  }
+}
+@keyframes fly-right-one {
+  0% {
+    transform: scale(0.3) translateX(-10vw);
+  }
+  10% {
+    transform: translateY(2vh) translateX(10vw) scale(0.4);
+  }
+  20% {
+    transform: translateY(0vh) translateX(30vw) scale(0.5);
+  }
+  30% {
+    transform: translateY(4vh) translateX(50vw) scale(0.6);
+  }
+  40% {
+    transform: translateY(2vh) translateX(70vw) scale(0.6);
+  }
+  50% {
+    transform: translateY(0vh) translateX(90vw) scale(0.6);
+  }
+  60% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+  100% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+}
+@keyframes fly-right-two {
+  0% {
+    transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+  }
+  10% {
+    transform: translateY(0vh) translateX(10vw) scale(0.4);
+  }
+  20% {
+    transform: translateY(-4vh) translateX(30vw) scale(0.6);
+  }
+  30% {
+    transform: translateY(1vh) translateX(50vw) scale(0.45);
+  }
+  40% {
+    transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+  }
+  50% {
+    transform: translateY(0vh) translateX(90vw) scale(0.45);
+  }
+  51% {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+  100% {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+}
+
+/*input box */
+
+.container {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-container label {
+  width: 200px;
+  margin-right: 10px;
+  font-family:  'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+}
+
+.counter input {
+  width: 40px;
+  text-align: center;
+}
+
+.counter button {
+  width: 24px;
+  height: 24px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 5px; 
+}
+
+.counter button:hover {
+  background-color: #ccc;
+}
+
+.input-container input,
+.input-container select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+
+  
+}
+
+.button-container {
+  text-align: center;
+}
+
+#calculateButton {
+  display: inline-block;
+  padding: 6px 11px;
+  background-color: #606470; ;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+#calculateButton:hover {
+  background-color: #93deff; ;
+}
+
+.result-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.result-container h2 {
+  margin-bottom: 10px;
+}
+
+.result-container p {
+  margin-bottom: 5px;
+}
+
+.result-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.result-container a:hover {
+  text-decoration: underline;
+}
+
+.container-2{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 30vw;
+}
+.description{
+width: 40%;
+text-align: center;
+margin-bottom: 20px;
+
+}
+
+/* window */
+
+/* Stile del contenitore principale */
+.container-2 {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Stile della finestra */
+.window {
+  position: relative;
+  box-sizing: border-box;
+  width: 150px;
+  height: 250px;
+  
+  background-color: #d9d9d9;
+  border-radius: 1em;
+  box-sizing: 50%;
+  box-shadow: 
+  inset 0 0 8em rgba(0, 0, 0, 0.2),
+  0 0 0 0.2em #808080, 
+  0 0 0 2em whitesmoke, 
+  0 0 0 2.4em #808080, 
+  0 1em 2em 2em rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Stile delle tende */
+.window .curtain {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: whitesmoke;
+  top: -2%;
+  border-radius: 1em;
+  box-shadow:
+      0 0 0 0.4em #808080,
+      0 0 3em rgba(0, 0, 0, 0.4);
+  transition: 0.5s ease-in-out;
+  z-index: 2;
+}
+
+/* Stile delle tende quando la finestra è aperta */
+input:checked ~ .window .curtain {
+  top: -90%;
+  
+}
+input[type="checkbox" i] { display:none}
+/* Stile della barra superiore della finestra */
+.window .curtain::before {
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 0.8em;
+  background-color: #808080;
+  left: 30%;
+  bottom: 1.6em;
+  border-radius: 0.4em;
+}
+
+/* Stile dei pulsanti per aprire la finestra */
+input:checked ~ .window .curtain::after {
+  content: '';
+  position: absolute;
+  width: 1.6em;
+  height: 0.8em;
+  bottom: 1.6em;
+  background-image: radial-gradient(lightgreen, limegreen);
+  left: calc((100% - 1.6em) / 2);
+  border-radius: 0.4em;
+  
+}
+
+/* Stile delle nuvole */
+.window .clouds {
+  position: relative;
+  width: 20em;
+  height: 30em;
+  background-color: deepskyblue;
+  left: calc((100% - 20em) / 2);
+  top: calc((100% - 30em) / 2);
+  border-radius: 7em;
+  box-shadow: 0 0 0 0.4em #808080;
+  overflow: hidden;
+}
+
+/* Stile delle singole nuvole */
+.clouds span {
+  position: absolute;
+  width: 10em;
+  height: 4em;
+  background-color: white;
+  top: 20%;
+  border-radius: 4em;
+  animation: move 4s linear infinite;
+}
+
+/* Animazione delle nuvole */
+@keyframes move {
+  from {
+      left: -150%;
+  }
+
+  to {
+      left: 150%;
+  }
+}
+
+/* Posizionamento delle nuvole */
+.clouds span::before,
+.clouds span::after {
+  content: '';
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.clouds span::before {
+  top: -2em;
+  left: 2em;
+}
+
+.clouds span::after {
+  top: -1em;
+  right: 1em;
+}
+
+.clouds span:nth-child(2) {
+  top: 40%;
+  animation-delay: -1s;
+}
+
+.clouds span:nth-child(3) {
+  top: 60%;
+  animation-delay: -0.5s;
+}
+
+.clouds span:nth-child(4) {
+  top: 20%;
+  transform: scale(2);
+  animation-delay: -1.5s;
+}
+
+.clouds span:nth-child(5) {
+  top: 70%;
+  transform: scale(1.5);
+  animation-delay: -3s;
+}
+
+/*footer*/
+
+.footer {
+    
+  background: #000;
+  padding: 25px 0;
+  color:#fff;
+  margin-top: 200px;
+}
+
+
+/* tablet */
+@media (max-width: 768px) {
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-2 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: auto;
+  flex-direction: column;
+}
+.description {
+  width: 70%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.window{
+  width: 100px;
+    height: 180px;
+    box-shadow:
+inset 0 0 8em rgba(0, 0, 0, 0.2),
+0 0 0 0.1em #808080,
+0 0 0 1em whitesmoke,
+0 0 0 1.4em #808080,
+0 1em 1em 1em rgba(0, 0, 0, 0.1);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* smartphone */
+@media (max-width: 480px) {
+h1{
+  font-size: 60px;
+}
+p{
+  font-size: 18px;
+}
+.window{
+  width: 100px;
+    height: 180px;
+    box-shadow:
+inset 0 0 8em rgba(0, 0, 0, 0.2),
+0 0 0 0.1em #808080,
+0 0 0 1em whitesmoke,
+0 0 0 1.4em #808080,
+0 1em 1em 1em rgba(0, 0, 0, 0.1);
+}
+.container {
+  max-width: 80vw;
+  
+}
+}
+/* extra */
+
+@media (max-width: 1213px) {
+.container-2 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: auto;
+  flex-direction: column;
+  padding-bottom: 100px;
+}
+.description {
+  width: 70%;
+  text-align: center;
+  margin-bottom: 50px;
+}}
+
+@media (max-width: 338px) {
+.input-container input, .input-container select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-width: 97px;
+}
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Cleaner</title>
+    <link rel="icon" href="sky_cleaner-logo (2).png" type="">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="airport.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">  <div class="container-1">
+	<div class="title" >
+    <h1>SKY CLEANER</h1>
+    <img src="sky_cleaner__3.png" width="180px">
+    </div>
+    <div class="bird-container bird-container--one">
+      <div class="bird bird--one"></div>
+    </div>
+    
+    <div class="bird-container bird-container--two">
+      <div class="bird bird--two"></div>
+    </div>
+    
+    <div class="bird-container bird-container--three">
+      <div class="bird bird--three"></div>
+    </div>
+    
+    <div class="bird-container bird-container--four">
+      <div class="bird bird--four"></div>
+    </div>
+    
+  </div>
+  
+  <div class="container-2">
+  <container class="description">
+    <h2>what is sky cleaner?</h2>
+    <p>Welcome to<b> Sky Cleaner</b>, the website that allows you to calculate the <b>CO2 emissions</b> and ecological footprint of your flights with just a <b>few clicks</b>.</p>
+      <p> With Sky Cleaner, you can easily find out the <b>environmental</b> impact of your journey by simply entering the departure and destination airports, <b>without</b> the need for <b>complex calculations</b>.</p>
+
+  </container>
+  <input type="checkbox" id="toggleCurtain" class="toggle">
+  <figure class="window">
+    <div class="curtain"></div>
+    <div class="clouds">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </figure>
+</div>
+
+ <div class="container">
+    <h2>Calculate the ecological footprint of the flight</h2>
+    <div class="input-container">
+        <label for="origin">Departure airport:</label>
+        <input type="text" id="origin" placeholder="Es. Rome" />
+    </div>
+    <div class="input-container">
+        <label for="destination">destination airport:</label>
+        <input type="text" id="destination" placeholder="Es. New York" />
+    </div>
+    <div class="input-container">
+      <label for="participants">passenger:</label>
+      <div class="counter">
+          <button id="decrementButton">-</button>
+          <input type="number" id="participants" value="1" min="1" />
+          <button id="incrementButton">+</button>
+      </div>
+  </div>
+    <div class="input-container">
+        <label for="cabinClass">cabin class:</label>
+        <select id="cabinClass">
+            <option value="economy">Economy</option>
+            <option value="premium_economy">Premium Economy</option>
+            <option value="business">Business</option>
+            <option value="first">First</option>
+        </select>
+    </div>
+    <button id="calculateButton">calculate</button>
+    <div id="result" class="result-container"></div>
+    <div id="errorBanner" class="error-banner">
+      <p>Error: airport not found.</p>
+</div>
+</div>
+
+<footer class="footer">
+     
+  <p id="test" class="small-text">Copyright:2022 Luca Scocchi </p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
